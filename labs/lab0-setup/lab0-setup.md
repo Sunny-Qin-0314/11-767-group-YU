@@ -6,7 +6,7 @@ If you successfully complete all those tasks, then your final task is to write a
 
 Group name: Group-YU
 ---
-Group members present in lab today: Yuqing Qin, Yukun Xia
+Group members present in lab today: Yuqing Qin (yuqingq), Yukun Xia (yukunx)
 
 1: Set up your device.
 ----
@@ -19,16 +19,16 @@ Depending on your hardware, follow the instructions provided in this directory: 
 
     A: Yes. 
 
-    Problem 1: After system image was written into SD card, we powered on Jetson Nano, but it failed to boot and was stuck at `A start job is running for End-user configuration after initial OEM installation (10min 25s / no limit)`. The solution was to press `pressed ctrl+alt+del`.
+    Problem 1: After system image was written into SD card, we powered the Jetson Nano, but it failed to boot and was stuck at `A start job is running for End-user configuration after initial OEM installation (10min 25s / no limit)`. By searching up the NVIDIA forums about Jetson Nano setup, the solution was to press `ctrl+alt+del`.
 
-    Problem 2: Initially, `sudo apt -y install curl` was not runnable, and we had to enable `Source code` in `Software & Updates`.
+    Problem 2: Initially, `sudo apt -y install curl` was not runnable, and we had to enable `Source Code` in `Software & Updates` so that the system can download packages from the internet source code.
 
-    Problem 3: `torchvision` was not automatically installed with pytorch, and its installation script was not written in the setup-jetson.md. We tried a [thrid-party tutorial](https://qengineering.eu/install-pytorch-on-jetson-nano.html) with precompiled wheel provided, but we failed at installing the wheel, with an error message `error: package directory 'torch/cuda' does not exist`. Then we tried the [Nvidia's instruction](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-9-0-now-available/72048) to build `torchvision` from scratch. The commands we ran were documented in the following.
+    Problem 3: `torchvision` was not automatically installed with pytorch, and its installation script was not written in the setup-jetson.md. We tried a [thrid-party tutorial](https://qengineering.eu/install-pytorch-on-jetson-nano.html) with precompiled wheel provided, but we failed at installing the wheel, with an error message `error: package directory 'torch/cuda' does not exist`. Then we tried the [Nvidia's instruction](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-9-0-now-available/72048) to build `torchvision` from scratch. The commands we ran are documented as following.
     ```
     $ sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
     $ git clone --branch release/0.10.0 https://github.com/pytorch/vision torchvision   # see below for version of torchvision to download
     $ cd torchvision
-    $ export BUILD_VERSION=0.10.0  # where 0.x.0 is the torchvision version  
+    $ export BUILD_VERSION=0.10.0  # where 0.10.0 is the torchvision version corresponding to pytorch 1.9.0
     $ python3 setup.py install --user
     $ cd ../  # attempting to load torchvision from build dir will result in import error
     ```
@@ -41,22 +41,22 @@ Depending on your hardware, follow the instructions provided in this directory: 
 ----
 4. What is your group's hardware management plan? For example: Where will the device(s) be stored throughout the semester? What will happen if a device needs physical restart or debugging? What will happen in the case of COVID lockdown?
 
-    Location: We'll keep our Jetson Nano at the MRSD Lab in the basement of NSH.
+    Location to store device: Since we both are from MRSD program, we'll keep our Jetson Nano at the MRSD Lab in the basement of NSH. We have been assigned an area to put all the devices.
 
-    Physical Operation: Yuqing and Yukun are both MRSD students, and we'll usually will stay in the MRSD Lab. 
+    Physical Operation: Yuqing and Yukun are both MRSD students, and we'll usually stay in the MRSD Lab for our capstone project. We could get access to the device easily. 
 
-    COVID Lockdown: MRSD Lab is large enough to maintain social distancing, so our group progress is not likely to be affected by potential lockdown.
+    COVID Lockdown: MRSD Lab is large enough to maintain social distancing, so our group progress is not likely to be affected by the potential lockdown. If it happens, we could also take the device home so that we could work together without going to school.
 
 
 3: Putting it all together
 ----
 5. Now, you should be able to take a picture, record audio, run a basic computer vision model, and run a basic NLP model. Now, write a script that pipes I/O to models. For example, write a script that takes a picture then runs a detection model on that image, and/or write a script that runs speech-to-text on audio, then performs classification on the resulting text. Include the script at the end of your lab report.
 
-    A: The script is in scetion 8.
+    A: We decided to run hand pose detection model on the captured image. The script is shown in section 8.
 
 6. Describe what the script you wrote does (document it.) 
 
-    A: The script uses opencv and gstreamer to read image from camera. Then the script transforms the image from BGR to RGB, and is fed into mediapipe's hand detection function `hands.process(img)`. The detection results finally are drawn on the original image, and stored to `output.png`.
+    A: The script first uses opencv and gstreamer to read image from camera stream. The script then transforms the image from BGR to RGB, and fed the image into mediapipe's hand pose detection model by using `hands.process(img)` (`hands` here is the loaded pretrained model). The detection results are drawn on the original image, and stored to `output.png`. The sample result is shown below:
 
     ![Image + Hand Detection](output.png)
 
@@ -65,11 +65,11 @@ Depending on your hardware, follow the instructions provided in this directory: 
 
     A: Yes. 
 
-    Problem 1: After OpenCV and OpenCV-Contrib was updated to 4.5.3, we lost the connection to the camera. We finally found the issue was that our Opencv-Contrib didn't support gstreamer, and the issue was resolved by reinstalling OpenCV-Contrib 4.5.3 with the wheel provided by Taiqi He in slack. 
+    Problem 1: After OpenCV and OpenCV-Contrib was updated to 4.5.3, we lost the connection to the camera. We finally found the issue was that our Opencv-Contrib didn't support gstreamer, and the issue was resolved by reinstalling OpenCV-Contrib 4.5.3 with the wheel provided by Taiqi He in slack. Current version for OpenCV and OpenCV-Contrib are 4.5.3, numpy currently is 1.19.4.
 
-    Problem 2: The Mediapipe we installed doesn't contain a module `mp.solutions.drawing_styles`, so we simply deleted those related lines.
+    Problem 2: The latest Mediapipe we installed doesn't contain a module `mp.solutions.drawing_styles`, which is shown in the sample code for using mediapipe. We chose to delete those drawing_styles and use the plain drawing functions to draw the hand pose.
 
-8. Script
+8. Script (same as 'classify_image.py')
 
 ```Python
 import cv2, os, sys
