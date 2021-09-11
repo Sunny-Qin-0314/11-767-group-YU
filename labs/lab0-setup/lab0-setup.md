@@ -56,7 +56,7 @@ Depending on your hardware, follow the instructions provided in this directory: 
 
 6. Describe what the script you wrote does (document it.) 
 
-    A: The script first uses opencv and gstreamer to read image from camera stream. The script then transforms the image from BGR to RGB, and fed the image into mediapipe's hand pose detection model by using `hands.process(img)` (`hands` here is the loaded pretrained model). The detection results are drawn on the original image, and stored to `output.png`. The sample result is shown below:
+    A: The script first uses opencv and gstreamer to read image from camera stream. The script then transforms the image from BGR to RGB, and fed the image into mediapipe's hand pose detection model by using `hands.process(img)` (`hands` is the loaded pretrained model). The detection results are drawn on the original image, and stored to `output.png`. The sample result is shown below:
 
     ![Image + Hand Detection](output.png)
 
@@ -69,7 +69,7 @@ Depending on your hardware, follow the instructions provided in this directory: 
 
     Problem 2: The latest Mediapipe we installed doesn't contain a module `mp.solutions.drawing_styles`, which is shown in the sample code for using mediapipe. We chose to delete those drawing_styles and use the plain drawing functions to draw the hand pose.
 
-8. Script (same as 'classify_image.py')
+8. Script (same as `classify_image.py`)
 
 ```Python
 import cv2, os, sys
