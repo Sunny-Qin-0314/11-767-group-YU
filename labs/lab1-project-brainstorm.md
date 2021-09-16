@@ -20,45 +20,45 @@ Write down 3-5 project ideas your group considered (a few sentences each). Depen
 Choose two of the above ideas. For each one:
 1. How would this project leverage the expertise of each member of your group?
 
-    Project idea 1: Optimization of SuperPoint Network
+    * Project idea 1: Optimization of SuperPoint Network
         
-        This project will involve the visual learning, SLAM, optimization techniques. SuperPoint has the VGG-like backbone, which is something Yuqing is familiar with in visual learning, and Yukun has great experience in SLAM. We all had experience working with Jetson and some optimization knowledge. 
+         This project will involve the visual learning, SLAM, optimization techniques. SuperPoint has the VGG-like backbone, which is something Yuqing is familiar with in visual learning, and Yukun has great experience in SLAM. We all had experience working with Jetson and some optimization knowledge. 
     
-    Project idea 2: Retraining SuperPoint Network
+    * Project idea 2: Retraining SuperPoint Network
        
-       This project will involve great work in training and network design. Yuqing and Yukun are both confidence in their visual learning experience. By deploying different network architecture as backbone or modifying the current architecture, hopefully we could make the model running on Jetson Nano with acceptable performance. 
+         This project will involve great work in training and network design. Yuqing and Yukun are both confidence in their visual learning experience. By deploying different network architecture as backbone or modifying the current architecture, hopefully we could make the model running on Jetson Nano with acceptable performance. 
         
 
 2. In completing this project, what new things would you learn about: (a) hardware (b) efficiency in machine learning (c) I/O modalities (d) other?
     
-    Project idea 1: Optimization of SuperPoint Network
+    * Project idea 1: Optimization of SuperPoint Network
         
         We would definitely learn about a) hardware, since we have to deploy the model on Jetson Nano. We would need to look into the harware performance (power, memory usage). Also, b) efficiency in machine learning is something we will learn in the project as well. We want to try with different optimization techniques to solid our understanding of efficiency in machine learning. Other than these, we would also get some experience on different optimization techniques, and the state-of-art model deployment. 
     
-    Project idea 2: Retraining SuperPoint Network
+    * Project idea 2: Retraining SuperPoint Network
         
         If we are doing this project, we would also learn about the a). hardware. Loading model and looking at the hardware performance will be the major components in our project. Also, this project will involve b).efficiency in machine learning. The focus of this project will be mainly on the network design. Instead of utilizing optimization techniques (i.e. pruning, quantization), we would mainly focus on the optimized network module design. This project will make us learn about the state-of-art network design, and we could then deploy those ideas into this project.
 
 3. What potential road blocks or challenges do you foresee in this project? How might you adjust the project scope in case these aspects present unsurmountable challenges?
     
-    Project idea 1: Optimization of SuperPoint Network
+    * Project idea 1: Optimization of SuperPoint Network
         
         The timeline for us might be tight, since we have a lot of ideas that may want to test on. To mitigate the timeline effects, we will have a roughly timeline for each optimization techniques that we want to try. Also, we need to collect the hardware data and analyze on those data, so we will take that into account as well. Based on the timeline, we will first focus on 2 tenchniques. If we could not get both of them done by the end of the project, we will limit our project scope by only focusing on the optimization technique that has larger progress. If we have more time, then we would also try other techniques to have a comparison. 
 
         Also, the current SuperPoint has not been tested on mobile devices yet. We might not be able to launch it directly on Jetson. It would be hard for us to measure the baseline performance on Jetson(i.e. memory usage, run speed). We might need to start the baseline testing as soon as possible before we going forward so that we might know whether the current device is sufficient or not.
     
-    Proejct idea 2: Retraining SuperPoint Network
+    * Proejct idea 2: Retraining SuperPoint Network
         
         For this project, we have to have a deeper understanding the original network structure. Also, we would need to have a breadth understanding of other network structures that can be used in this project. This may require us to read through a lot of research papers, and have a thorough understanding of all these techniques. Also, training the network may take a lot of time and effort. We also need to consider about the time we have and plan everything beforehead to organize the project scale. 
 
 
 4. How could you potentially extend the scope of this project if you had e.g. one more month?
     
-    Project idea 1: Optimization of SuperPoint Network
+    * Project idea 1: Optimization of SuperPoint Network
         
         We would try other techniques and even change the network structure to see if there is anything we can improve on. If the techniques we try are useful, we might also try with SuperGlue network and see if they works or not. We would also test on real environment through the camera we got, which is already loaded on Jetson. 
 
-    Project idea 2: Retraining SuperPoint Network
+    * Project idea 2: Retraining SuperPoint Network
         
         If we have more time, we would try the optimization techniques as post-processing. Also, testing on the real data will be helpful for us to get better understanding of the improvement in real world environment. Even testing with multiple cameras can be our extended scope for this project as well. 
 
