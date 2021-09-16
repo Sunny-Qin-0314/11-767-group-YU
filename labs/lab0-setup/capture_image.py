@@ -20,7 +20,7 @@ WIDTH=1920
 center = (WIDTH / 2, HEIGHT / 2)
 M = cv2.getRotationMatrix2D(center, 180, 1.0)
 
-nano = False
+nano = True
 if nano:
   cam = cv2.VideoCapture(gstreamer_pipeline(), cv2.CAP_GSTREAMER)
 else:
@@ -31,8 +31,16 @@ else:
 
 
 
-if cam.isOpened():
-  val, img = cam.read()
-  if val:
-    cv2.imwrite('output.png', img)
-    #cv2.imwrite('output.png', cv2.warpAffine(img, M, (WIDTH, HEIGHT)))
+if not cam.isOpened():
+  print("Camera is closed")
+  exit()
+
+val, img = cam.read()
+if not val:
+  print("Failed to read image from camera")
+  exit()
+
+print("Image size is ", img.shape)
+
+cv2.imwrite('output.png', img)
+#cv2.imwrite('output.png', cv2.warpAffine(img, M, (WIDTH, HEIGHT)))
