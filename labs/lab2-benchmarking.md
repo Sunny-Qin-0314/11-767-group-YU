@@ -6,14 +6,20 @@ Ideally, the models you benchmark will be related to and useful for your class p
 
 Include any code you write to perform this benchmarking in your Canvas submission (either as a link to a folder on github, in a shared drive, zip, etc).
 
-Group name:
+Group name: YU
 ---
-Group members present in lab today:
+Group members present in lab today: Yukun Xia (yukunx), Yuqing Qin (yuqingq)
 
 1: Models
 ----
 1. Which models and/or model variants will your group be benchmarking? Please be specific.
+
+VGG-16, MobileNet. 
+
 2. Why did you choose these models?
+
+Our project will use SuperPoint, which uses VGG as backbone. One of our optimization approach is to change the backbone to a more effecient one. MobileNet is one of the choices.
+
 3. For each model, you will measure parameter count, inference latency, and energy use. For latency and energy, you will also be varying a parameter such as input size or batch size. What are your hypothesis for how the models will compare according to these metrics? Explain.
 
 2: Parameter count
@@ -22,6 +28,14 @@ Group members present in lab today:
    ```
    num_params = sum([np.prod(p.size()) for p in model.parameters()])
    ```
+
+   Model | Num. of Params
+   --- | ---
+   MobileNetv2 | 	3504872
+   MobileNetv3_small | 	2542856
+   ResNet18 | 		11689512
+   SqueezeNet | 	1235496
+   
 2. Does this number account for any parameter sharing that might be part of the model you're benchmarking? 
 3. Any difficulties you encountered here? Why or why not?
 
@@ -39,6 +53,15 @@ Group members present in lab today:
     Best practice is to not include the first pass in timing, since it may include data loading, caching, etc.* and to report the mean and standard deviation of *k* repetitions. For the purposes of this lab, *k*=10 is reasonable. (If standard deviation is high, you may want to run more repetitions. If it is low, you might be able to get away with fewer repetitions.)
     
     For more information on `timeit` and measuring elapsed time in Python, you may want to refer to [this Stack Overflow post](https://stackoverflow.com/questions/7370801/how-to-measure-elapsed-time-in-python).
+
+    Model | Latency (CPU: second)
+    --- | ---
+    MobileNetv2 | 	5.28
+    MobileNetv3_small | 2.91
+    ResNet18 |		0.36
+    SqueezeNet |	0.29
+
+
 2. Repeat this, but try varying one of: batch size, input size, other. Plot the results (sorry this isn't a notebook):
    ```
    import matplotlib.pyplot as plt
@@ -53,6 +76,23 @@ Group members present in lab today:
    plt.savefig(plot_fname)
    # or plot.show() if you e.g. copy results to laptop
    ```
+
+2.1 MobileNetv2
+
+![MobileNetv2](./lab2-benchmarking/figures/mobilenetv2_batch_latency.png)
+
+2.2 MobilevNet3_small
+
+![MobilevNet3_small](./lab2-benchmarking/figures/mobilenetv3_small_batch_latency.png)
+
+2.3 Resnet18
+
+![Resnet18](./lab2-benchmarking/figures/resnet18_batch_latency.png)
+
+2.4 SqueezeNet
+
+![SqueezeNet](./lab2-benchmarking/figures/squeezenet_batch_latency.png)
+
 4. Any difficulties you encountered here? Why or why not?
 
 4: Energy use
@@ -63,6 +103,13 @@ Group members present in lab today:
     pip3 install powertop
     ```
     and/or the `jtop` tool on Jetson (see installation instructions [here](https://github.com/rbonghi/jetson_stats/)). Follow the same procedure as you used to compute latency, but this time compute energy: (avg) watts * time.
+
+    Model | Energy (CPU: Joule)
+    --- | ---
+    MobileNetv2 | 	
+    MobileNetv3_small | 
+    ResNet18 |		
+    SqueezeNet |	
 
 5: Discussion
 ----

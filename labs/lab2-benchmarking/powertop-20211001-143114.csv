@@ -1,0 +1,624 @@
+____________________________________________________________________
+			P o w e r T O P
+
+____________________________________________________________________
+ *  *  *   System Information   *  *  *
+
+PowerTOP Version;v2.9 ran at Fri Oct  1 14:31:14 2021
+
+Kernel Version;Linux version 4.9.253-tegra
+System Name;
+CPU Information;4 ARMv8 Processor rev 1 (v8l)
+OS Information;Ubuntu 18.04.5 LTS
+
+Target: 1 units/s;System:  1001.2 wakeup/s;CPU:  18.1% usage;GPU: 0 ops/s;GFX: 168.8 wakeups/s;VFS: 0 ops/s;
+
+____________________________________________________________________
+ *  *  *   Top 10 Power Consumers   *  *  *
+
+Usage;Events/s;Category;Description
+  3.4%;184.4;Process;[PID 5677] /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 
+  5.9%; 65.4;Process;[PID 4804] /usr/bin/nautilus --gapplication-service 
+  0.3%; 58.6;Process;[PID 4844] [nvgpu_channel_p]
+  0.0%; 59.5;kWork;tegra_dc_frame_end
+  0.1%; 58.6;kWork;nvhost_syncpt_low_prio_work
+  0.1%; 58.6;kWork;tegra_dc_vblank
+  0.0%; 56.6;Interrupt;[69] host_syncpt
+  2.1%; 38.1;Process;[PID 6650] /usr/bin/compiz 
+  0.0%; 52.7;Process;[PID 1] /sbin/init 2 
+  0.7%; 45.9;Process;[PID 1108] [irq/74-tegradc.]
+
+____________________________________________________________________
+ *  *  *   Processor Idle State Report   *  *  *
+
+Package;0
+WFI;  6.9%
+c7; 88.8%
+;
+;
+;
+;
+;
+;
+;
+;
+
+CPU;0
+WFI; 11.5%;   0.6 ms
+c7; 83.5%;   2.3 ms
+CPU;1
+WFI;  5.8%;   0.8 ms
+c7; 89.0%;   7.2 ms
+CPU;2
+WFI;  6.9%;   1.0 ms
+c7; 87.9%;   4.7 ms
+CPU;3
+WFI;  3.1%;   0.7 ms
+c7; 93.6%;  13.6 ms
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+
+____________________________________________________________________
+ *  *  *   Processor Frequency Report   *  *  *
+
+Package;0
+ 102 MHz;   0.0% 
+ 204 MHz;   0.0% 
+ 307 MHz;   0.0% 
+ 403 MHz;   0.0% 
+ 518 MHz;   0.0% 
+ 614 MHz;   0.0% 
+ 710 MHz;   0.0% 
+ 826 MHz;   0.0% 
+ 922 MHz;   0.0% 
+1037 MHz;   0.0% 
+1133 MHz;   0.0% 
+1224 MHz;  11.9% 
+1326 MHz;   0.2% 
+1428 MHz;   0.5% 
+1479 MHz;   2.8% 
+Idle;  84.5% 
+;
+;
+;
+;
+
+CPU 0
+ 102 MHz;   0.0% 
+ 204 MHz;   0.0% 
+ 307 MHz;   0.0% 
+ 403 MHz;   0.0% 
+ 518 MHz;   0.0% 
+ 614 MHz;   0.0% 
+ 710 MHz;   0.0% 
+ 826 MHz;   0.0% 
+ 922 MHz;   0.0% 
+1037 MHz;   0.0% 
+1133 MHz;   0.0% 
+1224 MHz;   4.3% 
+1326 MHz;   0.0% 
+1428 MHz;   0.2% 
+1479 MHz;   0.3% 
+Idle;  95.1% 
+CPU 1
+ 102 MHz;   0.0% 
+ 204 MHz;   0.0% 
+ 307 MHz;   0.0% 
+ 403 MHz;   0.0% 
+ 518 MHz;   0.0% 
+ 614 MHz;   0.0% 
+ 710 MHz;   0.0% 
+ 826 MHz;   0.0% 
+ 922 MHz;   0.0% 
+1037 MHz;   0.0% 
+1133 MHz;   0.0% 
+1224 MHz;   3.5% 
+1326 MHz;   0.1% 
+1428 MHz;   0.3% 
+1479 MHz;   1.4% 
+Idle;  94.7% 
+CPU 2
+ 102 MHz;   0.0% 
+ 204 MHz;   0.0% 
+ 307 MHz;   0.0% 
+ 403 MHz;   0.0% 
+ 518 MHz;   0.0% 
+ 614 MHz;   0.0% 
+ 710 MHz;   0.0% 
+ 826 MHz;   0.0% 
+ 922 MHz;   0.0% 
+1037 MHz;   0.0% 
+1133 MHz;   0.0% 
+1224 MHz;   4.3% 
+1326 MHz;   0.1% 
+1428 MHz;   0.1% 
+1479 MHz;   0.9% 
+Idle;  94.7% 
+CPU 3
+ 102 MHz;   0.0% 
+ 204 MHz;   0.0% 
+ 307 MHz;   0.0% 
+ 403 MHz;   0.0% 
+ 518 MHz;   0.0% 
+ 614 MHz;   0.0% 
+ 710 MHz;   0.0% 
+ 826 MHz;   0.0% 
+ 922 MHz;   0.0% 
+1037 MHz;   0.0% 
+1133 MHz;   0.0% 
+1224 MHz;   1.9% 
+1326 MHz;   0.1% 
+1428 MHz;   0.3% 
+1479 MHz;   1.1% 
+Idle;  96.5% 
+;
+;
+;
+;
+;
+;
+;
+;
+
+____________________________________________________________________
+ *  *  *   Overview of Software Power Consumers   *  *  *
+
+Usage;Wakeups/s;GPU ops/s;Disk IO/s;GFX Wakeups/s;Category;Description
+ 34.2 ms/s;184.4;;; 53.7;Process;[PID 5677] /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 
+ 58.7 ms/s; 65.4;;; 71.2;Process;[PID 4804] /usr/bin/nautilus --gapplication-service 
+  3.2 ms/s; 58.6;;;  1.0;Process;[PID 4844] [nvgpu_channel_p]
+332.7 us/s; 59.5;;;;kWork;tegra_dc_frame_end
+688.3 us/s; 58.6;;;;kWork;nvhost_syncpt_low_prio_work
+643.4 us/s; 58.6;;;;kWork;tegra_dc_vblank
+104.8 us/s; 56.6;;;;Interrupt;[69] host_syncpt
+ 21.3 ms/s; 38.1;;; 36.1;Process;[PID 6650] /usr/bin/compiz 
+434.6 us/s; 52.7;;;;Process;[PID 1] /sbin/init 2 
+  6.9 ms/s; 45.9;;;;Process;[PID 1108] [irq/74-tegradc.]
+332.9 us/s; 35.1;;;;Process;[PID 2899] /usr/sbin/haveged --Foreground --verbose=1 -w 1024 
+  0.9 ms/s; 29.3;;;;Timer;tick_sched_timer
+  1.5 ms/s; 24.4;;;;Process;[PID 4356] [sugov:0]
+  1.0 ms/s; 22.4;;;  2.0;Process;[PID 2439] [irq/78-gk20a_st]
+  2.0 ms/s; 19.5;;;;Process;[PID 832] [irq/69-host_syn]
+  3.0 ms/s; 18.5;;;;Process;[PID 10733] /home/yu/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/node /home/yu/.vscode-server/bin/7f6ab5485bbc0
+255.9 us/s; 16.6;;;;Process;[PID 7] [rcu_preempt]
+  3.8 ms/s; 13.7;;;;Interrupt;[61] xhci-hcd:usb1
+390.5 us/s; 12.7;;;;Interrupt;[6] tasklet(softirq)
+  1.7 ms/s; 11.7;;;;Interrupt;[7] sched(softirq)
+  1.6 ms/s; 10.7;;;  1.0;Process;[PID 14543] /usr/lib/chromium-browser/chromium-browser --enable-pinch 
+257.2 us/s;  9.8;;;;Process;[PID 14704] /usr/lib/chromium-browser/chromium-browser --type=gpu-process --field-trial-handle=13519311279803180718,63715387797
+225.6 us/s;  9.8;;;;Process;[PID 14705] /usr/lib/chromium-browser/chromium-browser --type=gpu-process --field-trial-handle=13519311279803180718,63715387797
+324.3 us/s;  8.8;;;;kWork;devfreq_monitor
+236.0 us/s;  8.8;;;;Process;[PID 14706] /usr/lib/chromium-browser/chromium-browser --type=gpu-process --field-trial-handle=13519311279803180718,63715387797
+ 90.5 us/s;  7.8;;;;kWork;$x
+ 19.2 ms/s;;;;;Process;[PID 15065] powertop --time=1 --csv --iteration=10 
+  1.3 ms/s;  4.9;;;;Process;[PID 1102] [tegradc.0/a]
+  1.1 ms/s;  4.9;;;;Process;[PID 6188] /home/yu/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/node /home/yu/.vscode-server/bin/7f6ab5485bbc00
+  1.0 ms/s;  3.9;;;  3.9;Process;[PID 6220] /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session 
+288.6 us/s;  3.9;;;;Process;[PID 14707] /usr/lib/chromium-browser/chromium-browser --type=gpu-process --field-trial-handle=13519311279803180718,63715387797
+202.4 us/s;  3.9;;;;Process;[PID 17945] /usr/bin/kwalletd5 
+ 69.9 us/s;  3.9;;;;Process;[PID 8] [rcu_sched]
+ 59.2 us/s;  3.9;;;;Process;[PID 5340] /usr/bin/containerd 
+ 56.9 us/s;  3.9;;;;Process;[PID 4939] /usr/bin/containerd 
+621.6 us/s;  2.9;;;;Process;[PID 10726] /home/yu/.vscode-server/bin/7f6ab5485bbc008386c4386d08766667e155244e/node /home/yu/.vscode-server/bin/7f6ab5485bbc0
+  0.0 us/s;  2.9;;;;kWork;BlinkWorkItemCallback
+  1.5 ms/s;  2.0;;;;Timer;hrtimer_wakeup
+606.7 us/s;  2.0;;;;Process;[PID 1876] [mmcqd/0]
+426.1 us/s;  2.0;;;;Process;[PID 10357] sshd: yu@notty 
+ 44.8 us/s;  2.0;;;;Process;[PID 4938] /usr/bin/containerd 
+ 27.7 us/s;  2.0;;;;Process;[PID 6552] /usr/lib/rtkit/rtkit-daemon 
+  7.5 us/s;  2.0;;;;Interrupt;[0] HI_SOFTIRQ
+  1.2 ms/s;  1.0;;;;Process;[PID 6859] python3 /usr/share/nvpmodel_indicator/nvpmodel_indicator.py 
+625.0 us/s;  1.0;;;;Process;[PID 14326] [kworker/u8:2]
+371.9 us/s;  1.0;;;;Process;[PID 6854] python3 /usr/share/nvpmodel_indicator/nvpmodel_indicator.py 
+ 65.4 us/s;  1.0;;;;Process;[PID 7089] /usr/lib/packagekit/packagekitd 
+ 48.9 us/s;  1.0;;;;Process;[PID 4226] /usr/lib/accountsservice/accounts-daemon 
+ 45.1 us/s;  1.0;;;;Process;[PID 5207] /usr/bin/containerd 
+ 43.8 us/s;  1.0;;;;Process;[PID 5311] /usr/bin/containerd 
+ 23.6 us/s;  1.0;;;;kWork;thermal_zone_device_check
+ 17.7 us/s;  1.0;;;;Interrupt;[90] mmc0
+ 10.0 us/s;  1.0;;;;kWork;therm_fan_est_work_func
+  4.9 us/s;  1.0;;;;kWork;tegra_xusb_boost_cpu_freq_fn
+  4.0 us/s;  1.0;;;;kWork;dst_gc_task
+  3.9 us/s;  1.0;;;;Timer;sched_rt_period_timer
+  2.1 ms/s;;;;;Process;[PID 13431] [kworker/0:2]
+623.5 us/s;;;;;Interrupt;[9] RCU(softirq)
+601.5 us/s;;;;;kWork;tegra_dc_vpulse2
+597.5 us/s;;;;;Process;[PID 13133] [kworker/u8:0]
+498.9 us/s;;;;;Interrupt;[11] tegra210_timer2
+399.2 us/s;;;;;Timer;emc_train
+398.7 us/s;;;;;Process;[PID 12490] [kworker/2:1]
+355.6 us/s;;;;;Interrupt;[10] tegra210_timer1
+347.6 us/s;;;;;Interrupt;[9] tegra210_timer0
+334.2 us/s;;;;;Process;[PID 6216] /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3 
+298.8 us/s;;;;;Timer;process_timeout
+292.2 us/s;;;;;Interrupt;[1] timer(softirq)
+268.1 us/s;;;;;Process;[PID 17943] /usr/bin/kwalletd5 
+236.6 us/s;;;;;Interrupt;[12] tegra210_timer3
+190.9 us/s;;;;;Timer;delayed_work_timer_fn
+187.8 us/s;;;;;Interrupt;[3] net_rx(softirq)
+158.0 us/s;;;;;Process;[PID 6370] /usr/lib/aarch64-linux-gnu/bamf/bamfdaemon 
+150.7 us/s;;;;;Interrupt;[74] tegradc.0
+ 73.9 us/s;;;;;Process;[PID 3] [ksoftirqd/0]
+ 48.1 us/s;;;;;Interrupt;[78] gk20a_stall
+ 40.8 us/s;;;;;Process;[PID 17] [ksoftirqd/1]
+ 31.7 us/s;;;;;Timer;$x
+ 24.8 us/s;;;;;Process;[PID 5607] /usr/bin/containerd 
+ 19.6 us/s;;;;;Process;[PID 6553] /usr/lib/rtkit/rtkit-daemon 
+ 15.0 us/s;;;;;Process;[PID 13950] [kworker/3:2]
+ 12.7 us/s;;;;;Timer;timerfd_tmrproc
+ 12.2 us/s;;;;;kWork;vmstat_update
+  7.7 us/s;;;;;Process;[PID 12740] [kworker/1:1]
+  7.2 us/s;;;;;Timer;pm_suspend_timer_fn
+  6.6 us/s;;;;;Timer;tcp_write_timer
+  5.9 us/s;;;;;Process;[PID 1892] [kworker/u9:1]
+  5.0 us/s;;;;;Timer;tcp_delack_timer
+  4.4 us/s;;;;;Timer;rtl8168_link_timer
+  2.3 us/s;;;;;kWork;vmstat_shepherd
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+;;;;;;
+
+____________________________________________________________________
+ *  *  *   Device Power Report   *  *  *
+
+Usage;Device Name
+ 18.1%;CPU use
+100.0%;runtime-50000000.host1x
+100.0%;runtime-57000000.gpu
+100.0%;USB device: USB Optical Mouse
+100.0%;runtime-sdhci-tegra.0
+100.0%;USB device: 802.11ac NIC (Realtek)
+100.0%;USB device: xHCI Host Controller
+100.0%;USB device: USB 2.0 Hub
+100.0%;runtime-1003000.pcie
+100.0%;USB device: USB Receiver (Logitech)
+100.0%;runtime-60020000.dma
+100.0%;runtime-70090000.xusb
+100.0%;runtime-70030000.hda
+100.0%;PCI Device: NVIDIA Corporation Device 0faf
+100.0%;PCI Device: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+100.0%;runtime-70110000.clock
+100.0%;Radio device: rtl8821cu
+100.0%;runtime-tegradc.0
+ 25.5 pkts/s;Network interface: wlan0 (rtl8821cu)
+  0.0%;runtime-spi32766.0
+  0.0%;runtime-spi0.1
+  0.0%;runtime-spi1.0
+  0.0%;runtime-cpuidle
+  0.0%;runtime-7001b000.external-memory-controller
+  0.0%;runtime-7.spdif-dit.7
+  0.0%;runtime-smp-custom-ipi
+  0.0%;runtime-54580000.sor1
+  0.0%;runtime-reg-dummy
+  0.0%;runtime-7000d100.i2c
+  0.0%;runtime-1.spdif-dit.1
+  0.0%;runtime-max77620-thermal
+  0.0%;runtime-pwm_regulators:pwm-regulator@0
+  0.0%;runtime-mods-simple-bus
+  0.0%;runtime-tegra210-admaif
+  0.0%;runtime-tegra_udrm
+  0.0%;runtime-4.spdif-dit.4
+  0.0%;runtime-70410000.spi
+  0.0%;runtime-regulators:regulator@7
+  0.0%;runtime-tegra210-adx.1
+  0.0%;runtime-702d3000.amx
+  0.0%;runtime-6000c800.actmon
+  0.0%;runtime-544c0000.nvenc
+  0.0%;runtime-tegra210-sfc.2
+  0.0%;runtime-regulators:regulator@10
+  0.0%;runtime-tegra210-mvc.1
+  0.0%;runtime-7000f800.efuse
+  0.0%;runtime-tegra210-dmic.1
+  0.0%;runtime-dfll-cdev-floor
+  0.0%;runtime-pmc-iopower
+  0.0%;runtime-dvfs_rails:vdd-gpu-vmax-cdev@9
+  0.0%;runtime-extcon:disp-state
+  0.0%;runtime-nvpmodel
+  0.0%;runtime-extcon:extcon@1
+  0.0%;runtime-arm-pmu
+  0.0%;runtime-extcon
+  0.0%;runtime-702d0800.ahub
+  0.0%;runtime-7000a000.pwm
+  0.0%;runtime-54600000.isp
+  0.0%;runtime-70098000.mailbox
+  0.0%;runtime-regulators:regulator@5
+  0.0%;runtime-power-domain
+  0.0%;runtime-spi0.0
+  0.0%;runtime-regulatory.0
+  0.0%;runtime-tegra210-sfc.0
+  0.0%;runtime-72010000.ptm
+  0.0%;runtime-7000c400.i2c
+  0.0%;runtime-7000c700.i2c
+  0.0 pkts/s;nic:dummy0
+  0.0%;runtime-max77620-clock
+  0.0%;runtime-70019000.memory-controller
+  0.0%;runtime-60006000.clock
+  0.0%;runtime-dvfs_rails:vdd-gpu-scaling-cdev@7
+  0.0%;runtime-7000f800.efuse:efuse-burn
+  0.0%;runtime-cpu-throttle-alert
+  0.0%;runtime-7000e400.pmc
+  0.0%;runtime-702ef000.adsp
+  0.0%;runtime-regulators:regulator@3
+  0.0%;runtime-7000d600.spi
+  0.0%;runtime-regulators:regulator@8
+  0.0%;runtime-7000c500.i2c
+  0.0%;runtime-54500000.tsec
+  0.0%;runtime-spi1.1
+  0.0%;runtime-70012000.se
+  0.0%;runtime-tegra210-ope.1
+  0.0%;runtime-tegra210-afc.4
+  0.0%;runtime-core_dvfs_cdev_floor
+  0.0%;runtime-aconnect@702c0000:adsp_audio
+  0.0%;runtime-6.spdif-dit.6
+  0.0%;runtime-regulators:regulator@1
+  0.0%;runtime-leds
+  0.0%;runtime-tegra210-i2s.3
+  0.0%;runtime-3.spdif-dit.3
+  0.0%;runtime-psci
+  0.0%;runtime-6000c000.ahb
+  0.0%;runtime-alarmtimer
+  0.0%;runtime-max77620-watchdog
+  0.0%;runtime-702d3100.amx
+  0.0%;runtime-tegra210-afc.2
+  0.0%;runtime-0.spdif-dit.0
+  0.0%;runtime-70015000.tegra_cec
+  0.0%;runtime-702f9000.agic
+  0.0%;runtime-ramoops.0
+  0.0%;runtime-54040000.dpaux1
+  0.0 pkts/s;nic:usb0
+  0.0%;runtime-700e3000.mipical
+  0.0 pkts/s;nic:l4tbr0
+  0.0%;runtime-7000e000.rtc
+  0.0%;runtime-aconnect@702c0000
+  0.0%;runtime-60005000.timer
+  0.0%;runtime-max77620-power
+  0.0%;runtime-max77620-rtc
+  0.0%;runtime-tegra210-afc.0
+  0.0%;runtime-cpufreq
+  0.0%;runtime-70019000.mc
+  0.0%;runtime-700e2000.soctherm
+  0.0%;I2C Adapter (i2c-5): 7000d100.i2c
+  0.0%;runtime-bthrot_cdev
+  0.0%;runtime-70019000.iommu
+  0.0%;runtime-tegra-supply-tests
+  0.0%;runtime-pwm_regulators
+  0.0%;runtime-regulators:regulator@11
+  0.0%;runtime-pwm_regulators:pwm-regulator@1
+  0.0%;runtime-max77620-gpio
+  0.0%;runtime-tegra210-sfc.3
+  0.0%;runtime-70006040.serial
+  0.0%;runtime-7000d400.spi
+  0.0%;runtime-tegra-carveouts
+  0.0%;runtime-dummy-cool-dev
+  0.0%;runtime-700008d4.pinmux
+  0.0%;runtime-gpu-throttle-alert
+  0.0%;runtime-546c0000.i2c
+  0.0%;runtime-pwm-fan
+  0.0%;runtime-dvfs_rails
+  0.0 pkts/s;nic:rndis0
+  0.0%;runtime-54380000.nvjpg
+  0.0%;runtime-regulators:regulator@6
+  0.0%;runtime-tegra210-mixer
+  0.0%;runtime-70000800.apbmisc
+  0.0%;runtime-5.spdif-dit.5
+  0.0%;runtime-7009f000.xusb_padctl
+  0.0%;runtime-regulators
+  0.0%;runtime-70110000.pwm
+  0.0%;runtime-dvfs
+  0.0%;runtime-7000d000.i2c
+  0.0%;runtime-tegra210-sfc.1
+  0.0%;runtime-timer
+  0.0%;runtime-50000000.host1x:vi-bypass
+  0.0%;runtime-sound
+  0.0%;runtime-tegra210-adx.0
+  0.0%;runtime-54480000.nvdec
+  0.0%;runtime-tegra-aotag
+  0.0%;runtime-54680000.isp
+  0.0%;runtime-hot-surface-alert
+  0.0%;runtime-54080000.vi
+  0.0%;runtime-regulators:regulator@4
+  0.0%;runtime-thermal-fan-est
+  0.0%;runtime-smmu_test
+  0.0 pkts/s;nic:docker0
+  0.0%;runtime-2.spdif-dit.2
+  0.0%;runtime-max77620-pinctrl
+  0.0%;I2C Device (3-0050): tegra_hdmi2.0
+  0.0%;runtime-7000fc00.kfuse
+  0.0%;runtime-702d8c00.spkprot
+  0.0%;runtime-tegra210-afc.5
+  0.0%;runtime-core_dvfs_cdev_cap
+  0.0%;runtime-dma_test
+  0.0%;runtime-Fixed MDIO bus.0
+  0.0%;runtime-regulators:regulator@2
+  0.0%;runtime-6000d000.gpio
+  0.0%;runtime-7000c000.i2c
+  0.0%;runtime-60007000.flow-controller
+  0.0%;I2C Device (3-0054): tegra_hdmi_scdc
+  0.0%;runtime-snd-soc-dummy
+  0.0%;runtime-70006000.serial
+  0.0%;runtime-tegra-camera-platform
+  0.0 pkts/s;Network interface: eth0 (r8168)
+  0.0%;runtime-serial8250
+  0.0%;runtime-tegra210-ope.0
+  0.0%;runtime-tegra210-afc.3
+  0.0%;runtime-bwmgr
+  0.0%;runtime-dfll-cdev-cap
+  0.0%;runtime-regulators:regulator@0
+  0.0%;runtime-max77620-pmic
+  0.0%;runtime-regulators:regulator@9
+  0.0%;I2C Adapter (i2c-3): 7000c700.i2c
+  0.0%;I2C Device (4-003c): max77620
+  0.0%;I2C Adapter (i2c-1): 7000c400.i2c
+  0.0%;runtime-54340000.vic
+  0.0%;runtime-702e2000.adma
+  0.0%;runtime-tegra210-dmic.0
+  0.0%;runtime-tegra210-i2s.2
+  0.0%;runtime-54100000.tsecb
+  0.0%;runtime-700d0000.xudc
+  0.0%;runtime-tegra_fiq_debugger
+  0.0%;runtime-tegra210-afc.1
+  0.0%;runtime-70006200.serial
+  0.0%;runtime-tegra210-mvc.0
+  0.0%;runtime-gpio-keys
+  0.0%;USB device: xHCI Host Controller
+  0.0%;I2C Device (3-003a): nvhdcp0
+  0.0%;I2C Device (4-0068): dummy
+  0.0%;I2C Adapter (i2c-6): Tegra I2C adapter
+  0.0%;I2C Adapter (i2c-4): 7000d000.i2c
+  0.0%;I2C Adapter (i2c-2): 7000c500.i2c
+  0.0%;I2C Device (6-0010): imx219
+  0.0%;I2C Adapter (i2c-0): 7000c000.i2c
+____________________________________________________________________
+ *  *  *   Process Device Activity   *  *  *
+
+Process;Device
+systemd;/dev/autofs
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/kmsg
+;/dev/rfkill
+systemd-journal;/dev/kmsg
+;/dev/kmsg
+haveged;/dev/random
+systemd-logind;/dev/input/event1
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/input/event5
+wpa_supplicant;/dev/random
+;/dev/rfkill
+;/dev/rfkill
+nvargus-daemon;/dev/fb0
+;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl-gpu
+;/dev/nvhost-vic
+;/dev/nvmap
+;/dev/tegra_dc_0
+;/dev/tegra_dc_ctrl
+Xorg;/dev/fb0
+;/dev/input/event1
+;/dev/input/event2
+;/dev/input/event3
+;/dev/input/event4
+;/dev/input/event5
+;/dev/nvhost-ctrl-gpu
+;/dev/nvhost-prof-gpu
+;/dev/nvmap
+;/dev/tegra_dc_0
+;/dev/tegra_dc_ctrl
+gvfsd-fuse;/dev/fuse
+indicator-bluet;/dev/rfkill
+bluetoothd;/dev/rfkill
+pulseaudio;/dev/snd/controlC0
+;/dev/snd/controlC0
+;/dev/snd/controlC1
+;/dev/snd/controlC1
+compiz;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl-gpu
+;/dev/nvmap
+python3;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl-gpu
+;/dev/nvmap
+chromium-browse;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl-gpu
+;/dev/nvmap
+;/dev/nvhost-ctrl
+;/dev/nvhost-ctrl-gpu
+kwalletd5;/dev/nvhost-ctrl-gpu
+;/dev/nvmap
+
+____________________________________________________________________
+ *  *  *   AHCI ALPM Residency Statistics - Not supported on this macine   *  *  *
+
+____________________________________________________________________
+ *  *  *   Software Settings in Need of Tuning   *  *  *
+
+Description;Script
+NMI watchdog should be turned off;echo '0' > '/proc/sys/kernel/nmi_watchdog';
+VM writeback timeout;echo '1500' > '/proc/sys/vm/dirty_writeback_centisecs';
+Autosuspend for USB device USB Receiver [Logitech];echo 'auto' > '/sys/bus/usb/devices/1-3.1/power/control';
+Autosuspend for USB device USB Optical Mouse [1-2];echo 'auto' > '/sys/bus/usb/devices/1-2/power/control';
+Runtime PM for PCI Device Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller;echo 'auto' > '/sys/bus/pci/devices/0000:01:00.0/power/control';
+Wake-on-lan status for device eth0;ethtool -s eth0 wol d;
+____________________________________________________________________
+ *  *  *   Untunable Software Issues   *  *  *
+
+Description
+I2C Device 4-003c has no runtime power management
+I2C Device 3-003a has no runtime power management
+I2C Device 4-0068 has no runtime power management
+I2C Device 6-0010 has no runtime power management
+I2C Device 3-0054 has no runtime power management
+I2C Device 3-0050 has no runtime power management
+____________________________________________________________________
+ *  *  *   Optimal Tuned Software Settings   *  *  *
+
+Description
+Wireless Power Saving for interface wlan0
+Runtime PM for I2C Adapter i2c-3 (7000c700.i2c)
+Autosuspend for USB device xHCI Host Controller [usb1]
+Autosuspend for USB device USB 2.0 Hub [1-3]
+Runtime PM for I2C Adapter i2c-2 (7000c500.i2c)
+Autosuspend for USB device xHCI Host Controller [usb2]
+Runtime PM for I2C Adapter i2c-6 (Tegra I2C adapter)
+Runtime PM for I2C Adapter i2c-1 (7000c400.i2c)
+Runtime PM for I2C Adapter i2c-4 (7000d000.i2c)
+Runtime PM for I2C Adapter i2c-0 (7000c000.i2c)
+Runtime PM for I2C Adapter i2c-5 (7000d100.i2c)
+Runtime PM for PCI Device NVIDIA Corporation Device 0faf
+Wake-on-lan status for device l4tbr0
+Wake-on-lan status for device usb0
+Wake-on-lan status for device dummy0
+Wake-on-lan status for device rndis0
+Wake-on-lan status for device docker0
+Wake-on-lan status for device wlan0
+
+
+
+
+
+

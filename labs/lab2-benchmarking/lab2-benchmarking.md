@@ -23,7 +23,16 @@ Group members present in lab today:
    num_params = sum([np.prod(p.size()) for p in model.parameters()])
    ```
    Report your results in a table.
+
+   Model | Num. of Params
+   --- | ---
+   MobileNetv2 | 3504872
+   VGG16 | 138357544
+   VGG19 | 143667240
+   Squeeze net | 1235496
+
 2. Does this number account for any parameter sharing that might be part of the model you're benchmarking? 
+
 3. Any difficulties you encountered here? Why or why not?
 
 3: Latency
