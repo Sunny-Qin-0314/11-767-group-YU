@@ -1,4 +1,4 @@
-Lab 3: Quantization
+# Lab 3: Quantization
 ===
 The goal of this lab is for you to benchmark and compare model size and inference efficiency **between quantized and original models** on your devices. You should benchmark the same models as you benchmarked last lab, so ideally **2*N* models or model variants, where *N* is the size of your group (so, two models per person.)** For now, if you don't have appropriate evaluation data in place that's fine; you can provide pretend data to the model for now and just evaluate efficiency.
 
@@ -10,7 +10,7 @@ Group name:
 ---
 Group members present in lab today: Yuqing Qin (yuqingq), Yukun Xia (yukunx)
 
-1: Models
+## 1: Models
 ----
 1. Which models and/or model variants will your group be studying in this lab? What is the original bit width of the models, and what precision will you be quantizing to? What parts of the model will be quantized (e.g. parameters, activations, ...)? Please be specific.
 
@@ -31,7 +31,7 @@ These four model are chosen by the last lab. It would be easy to quantize these 
 From the last lab, we saw that ResNet18 and squeezenet runs faster than mobilenetv3 and v3_small. We are expecting the quantized mobilenet would reach the similar performance we saw from ResNet and SqueezeNet. Also, the ResNet and SqueezeNet can be further quantized to reduce their memory usage. ResNet model is the one with the most expensive memory usage compared to the other threes. We are expecting the quantized ResNet would have a smaller model size. Regarding the latency, since the quantized model will have a smaller model size and small memory usage, the latency will also be decreased. When loading the model into memory and do the calculation, the low precision model will have less operations, which will make it run faster. 
 
 
-2: Quantization in PyTorch
+## 2: Quantization in PyTorch
 ----
 1. [Here is the official documentation for Torch quantization](https://pytorch.org/docs/stable/quantization.html) and an [official blog post](https://pytorch.org/blog/introduction-to-quantization-on-pytorch/) about the functionality. Today we'll be focusing on what the PyTorch documentation refers to as  **dynamic** quantization (experimenting with **static** quantization and **quantization-aware training (QAT)** is an option for extra credit if you wish). 
 
@@ -55,7 +55,7 @@ When we set up the `quantize=True` on Jetson, we got `segmentation fault` due to
 
 We tried to quantized our models on Jetson. It always failed by `segmentation fault` due to limited memory. Jetson is the edge device, we should apply every quantization or training processes on other devices, and only use Jetson when we decided to deploy the model.
 
-3: Model size
+## 3: Model size
 ----
 1. Compute the size of each model. Given the path to your model on disk, you can compute its size at the command line, e.g.:
    ```
@@ -74,8 +74,39 @@ We tried to quantized our models on Jetson. It always failed by `segmentation fa
 
 We first tried to do the quantization on Jetson, which failed due to the limited memory. Our RAM usage is almost full in Jetson. Therefore, we did the quantization on our own laptop and deploy the quantized model on Jetson instead. SqueezeNet does not contain linear layer, only convolutional layer, therefore it cannot be quantized by current dynamic quantization (pytorch currently only support `linear` and `LSTM` layer for dynamic quantization)
 
-4: Latency
+## 4: Latency
 ----
+
+### 4.1 Tests on Jetson Nano
+
+1. Latency
+
+Model: models.quantization.mobilenet_v2
+
+   Batch Size        |Latency(in seconds)
+   ---               | ---                       
+   1                 | 0.0637449                      
+   2                 | 0.0880395                    
+   4                 | 0.1375163                    
+   8                 | 0.2326068
+   
+2. Any difficulties you encountered here? Why or why not?
+
+If we set `quantize` to be `True` for other models under `models.quantization`, we'll always see segmentation fault immediately after we load the model. There's a small chance that there will be an error message from `TensorImpl.h` shown below. We also tested the dynamic quantization, but still segmentation fault stops us from further latency tests, even if the model is prequantized elsewhere and then loaded on Jetson via `torch.load("some_model_files.pth")`. Besides, the memory usage is quite normal when these segmentation faults appear, so at least the initial problem of the code is perhaps due to some internal bug of pytorch library running on an ARM device.
+
+
+>/home/yu/.local/lib/python3.6/site-packages/torch/quantization/observer.py:123: UserWarning: Please use quant_min and quant_max to specify the range for observers.                     reduce_range will be deprecated in a future release of PyTorch.
+
+>  reduce_range will be deprecated in a future release of PyTorch."
+
+>/home/yu/.local/lib/python3.6/site-packages/torch/quantization/observer.py:245: UserWarning: must run observer before calling calculate_qparams.                                        Returning default scale and zero point 
+
+>  Returning default scale and zero point "
+
+>[W TensorImpl.h:930] Warning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (function operator())
+
+
+### 4.2 Tests on Google Colab
 1. Compute the inference latency of each model. You can use the same procedure here as you used in the last lab. Here's a reminder of what we did last time: 
    You should measure latency by timing the forward pass only. For example, using `timeit`:
     ```
