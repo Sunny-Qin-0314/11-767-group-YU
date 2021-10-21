@@ -6,13 +6,24 @@ Ideally, the outcome of this lab would be: (1) the related work section of your 
 
 Group name:
 ---
-Group members present in lab today:
+Group members present in lab today: Yuqing Qin, Yukun Xia
 
 1: Related Work
 ----
 1. Choose at least 2 pieces of related work per group member. For each piece of related work, write a paragraph that includes:
     - Summary of the main contributions of that work.
     - How your proposed project builds upon or otherwise relates to that work.
+    
+    * Paper 1: [SuperPoint: Self-Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
+        * Contribution summary
+            * Superpoint is a deep learning feature point detector with self-supervised learning. Real images with different homography warpings will be used to detect feature points, and then the repeatable features will be collected as the training target. This process can be repeated to keep refining the detector.
+        * Relationship to the proposed project
+            * This paper will serve as the baseline of the proposed project
+    * Paper 2: [UnsuperPoint: End-to-end Unsupervised Interest Point Detector and Descriptor](https://arxiv.org/pdf/1907.04011.pdf)
+        * Contribution summary
+            * Formulate the deep learning feature point detection as a regression rather than a classification problem. The authors claimed that its performance surpassed SuperPoint.
+        * Relationship to the proposed project
+            * An extension to this project
 
 2: Baselines
 ----
