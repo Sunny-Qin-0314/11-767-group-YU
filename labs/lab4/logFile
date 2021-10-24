@@ -1,0 +1,77 @@
+==> Loading pre-trained network.
+=======================
+Total Number of Params:  1300865
+
+
+==> Running Demo.
+Processed image 1 (net+post_process: 3.02 FPS, total: 2.76 FPS).
+Processed image 2 (net+post_process: 2.94 FPS, total: 2.48 FPS).
+Processed image 3 (net+post_process: 2.82 FPS, total: 2.34 FPS).
+Processed image 4 (net+post_process: 2.52 FPS, total: 2.12 FPS).
+Processed image 5 (net+post_process: 2.81 FPS, total: 2.27 FPS).
+Processed image 6 (net+post_process: 3.56 FPS, total: 2.86 FPS).
+Processed image 7 (net+post_process: 3.18 FPS, total: 2.59 FPS).
+Processed image 8 (net+post_process: 3.26 FPS, total: 2.67 FPS).
+Processed image 9 (net+post_process: 3.69 FPS, total: 2.96 FPS).
+Processed image 10 (net+post_process: 3.42 FPS, total: 2.80 FPS).
+Processed image 11 (net+post_process: 3.64 FPS, total: 2.92 FPS).
+Processed image 12 (net+post_process: 3.33 FPS, total: 2.74 FPS).
+Processed image 13 (net+post_process: 3.36 FPS, total: 2.79 FPS).
+Processed image 14 (net+post_process: 3.44 FPS, total: 2.87 FPS).
+Processed image 15 (net+post_process: 3.44 FPS, total: 2.84 FPS).
+Processed image 16 (net+post_process: 3.40 FPS, total: 2.82 FPS).
+Processed image 17 (net+post_process: 3.39 FPS, total: 2.84 FPS).
+Processed image 18 (net+post_process: 3.41 FPS, total: 2.83 FPS).
+Processed image 19 (net+post_process: 3.41 FPS, total: 2.79 FPS).
+Processed image 20 (net+post_process: 3.14 FPS, total: 2.65 FPS).
+Processed image 21 (net+post_process: 3.84 FPS, total: 3.09 FPS).
+Processed image 22 (net+post_process: 3.30 FPS, total: 2.70 FPS).
+Processed image 23 (net+post_process: 3.59 FPS, total: 2.91 FPS).
+Processed image 24 (net+post_process: 3.67 FPS, total: 3.02 FPS).
+Processed image 25 (net+post_process: 3.65 FPS, total: 2.97 FPS).
+Processed image 26 (net+post_process: 4.13 FPS, total: 3.26 FPS).
+Processed image 27 (net+post_process: 3.85 FPS, total: 3.15 FPS).
+Processed image 28 (net+post_process: 2.94 FPS, total: 2.49 FPS).
+Processed image 29 (net+post_process: 2.13 FPS, total: 1.87 FPS).
+Processed image 30 (net+post_process: 3.47 FPS, total: 2.82 FPS).
+Processed image 31 (net+post_process: 3.27 FPS, total: 2.94 FPS).
+===================
+Average Latency: 0.306s
+
+
+
+===================
+Operation OPS         
+--------  ----------  
+conv1a    12288000    
+relu_1    2457600     
+conv1b    709017600   
+relu_2    2457600     
+pool      921600      
+conv2a    177254400   
+relu_3    614400      
+conv2b    177254400   
+relu_4    614400      
+pool_1    230400      
+conv3a    88627200    
+relu_5    307200      
+conv3b    177100800   
+relu_6    307200      
+pool_2    115200      
+conv4a    44275200    
+relu_7    76800       
+conv4b    44275200    
+relu_8    76800       
+conv_pa   88550400    
+relu_9    153600      
+conv_pb   5011500     
+conv_da   88550400    
+relu_10   153600      
+conv_db   19737600    
+-------   ---------   
+Input size: (1, 1, 120, 160)
+1,640,429,100 FLOPs or approx. 1.64 GFLOPs
+
+
+
+https://github.com/rpautrat/SuperPoint
