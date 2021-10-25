@@ -110,7 +110,7 @@ Input size: (1, 1, 120, 160)
 
 ![Sample output](output.png)
 
-Challenges: TODO
+Challenges: The pretrained Superpoint model was not runnable on GPU with too much memory usage. The solution was to increase the swap to 8GB, and turn off the ubuntu GUI. The first one ensures that even if the left memory is only ~500MB, Jetson will keep running the model without freezing, and the latter one saved about 300MB memory.
 
 
 5. If you finish running and evaluating your baselines, did the results align with your hypotheses? Are there any changes or focusing that you can do for your project based on insights from these results?
