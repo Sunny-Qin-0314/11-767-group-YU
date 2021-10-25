@@ -117,6 +117,8 @@ Challenges: The pretrained Superpoint model was not runnable on GPU with too muc
 
 The model runs much faster than we expected, and even the model size is smaller than what we thought. By looking at the paper and the model structure again, we found out that the SuperPoint network uses VGG-style backbone, but it does not use the heavy-load dense layer, which is originally used in VGG16. From this insights, we have to change our project focus a little bit. Only applying quantization might not have a big impacts, we would focus on retraining the network with other backbones(i.e MobileNet, Resnet, other larger backbone) and testing with other optimization approaches as well. 
 
+Besides, the model runs fast also because the pretrained model by default takes in a low resolution image, i.e. 120x160, while our previous tests on mobilenet and resnet processes 224x224 images. A small change could be increasing the resolution, while adapting optimization tricks. 
+
 3: Extra
 ----
 More related work, more baselines, more implementation, more analysis. Work on your project.
