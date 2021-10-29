@@ -12,9 +12,27 @@ Group members present in lab today: Yuqing Qin (yuqingq), Yukun Xia (yukunx)
 
 Today, we will go over the SuperPoint retraining tutorial, and write a script to revise the model structure. 
 
+Besides, here're two diagrams demonstrating our system design and test plan. 
+
+<p align="center">
+  <img width="499" height="447" src="Framework_Tests_combined.png" >
+</p>
+<p align="center">
+  <em>Test system design</em>
+</p>
+
+&nbsp;
+
+<p align="center">
+  <img width="447" height="314" src="Framework_Live_demo_with_Jetson.png" >
+</p>
+<p align="center">
+  <em>(Potential) Live demo system</em>
+</p>
+
 3. How will each group member contribute towards this plan?
 
-We will work together today. Later this week, Xukun would continue work on the benchmarking the performance of Superpoint. Yuqing would start to retrain the model.
+We will work together today. Later this week, Yukun would continue work on the benchmarking the performance of Superpoint. Yuqing would start to retrain the model.
 
 2: Execution
 ----
@@ -28,5 +46,7 @@ We have discussed our project scale, structure, design details today. The genera
 3: Next steps
 ----
 1. Are you making sufficient progress towards completing your final project? Explain why or why not. If not, please report how you plan to change the scope and/or focus of your project accordingly.
+
 2. Based on your work today / this week, and your answer to (1), what are your group's planned next steps?
+
 3. How will each group member contribute towards those steps? 
