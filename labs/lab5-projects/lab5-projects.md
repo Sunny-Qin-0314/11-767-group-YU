@@ -44,6 +44,8 @@ We have discussed our project scale, structure, design details this week. The ge
 
 We were planning to retrain the network with new architecture. After researching on the retraining repository, we found that training a SuperPoint on our devices  might take too long for us. We have to utilize AWS to retrain, so we asked for AWS credit during the lab session, and start to setup during the lab.
 
+We also hoped to finish benchmarking the superpoint versus other classic alternatives on KITTI, but programming a stereo visual odometry and the integration of superpoint into ROS take more time than our expectation. Till this point, the KITTI data loading and a stereo visual odometry with classic feature detectors are finished and tested, and the integration of superpoint is a work in progress. We are using TensorRT as our post-training quantization and deployment tool, and thus we need to write our own postprocessing code for superpoint. To the best of our knowledge, there's no similar code that we can refer to.
+
 3. What were the contributions of each group member towards all of the above?
 
 Yukun is working on the workflow generation and benchmarking the performance with pretrained model.
