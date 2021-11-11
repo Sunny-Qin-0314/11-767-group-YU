@@ -42,7 +42,9 @@ Models: 1. MagicLeap pretrained model  2. Another pretrained superpoint (from th
 
 2. Was there anything you had hoped to achieve, but did not? What happened? How did you work to resolve these challenges?
 
-We were thinking about using AWS to retrain the superpoint, but we all got rejected to increase the instances on AWS. We cannot use P instances right now. Therefore, Yuqing is using her laptop with NVIDIA 2070 Super to train the model. The synthetic model training takes us about 7 hours to train, and the full Superpoint takes us 24 hours to train. 
+For superpoint retraining, we were thinking about using AWS to retrain the superpoint, but we all got rejected to increase the instances on AWS. We cannot use P instances right now. Therefore, Yuqing is using her laptop with NVIDIA 2070 Super to train the model. The synthetic model training takes us about 7 hours to train, and the full Superpoint takes us 24 hours to train.
+
+At the benchmarking side, the deployment of superpoint in a stereo visual odometry setting takes more time than expectation. We finished running the superpoint models as TensorRT engines in C++, but the postprocessing requires more efforts, including the conversion from raw pointers to tensors, softmax, nonmaximum suppression etc. We've already had some good progress on the postprocessing, but still need more time.
 
 3. What were the contributions of each group member towards all of the above?
 
