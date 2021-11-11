@@ -28,7 +28,13 @@ For retraining: we are using pytorch to train SuperPoint. There are four main st
 - Use this model to export COCO pseudo labels. 
 - Train SuperPoint with COCO and its pseudo label.
 
-(TODO: add tensorboard picture)
+
+<p align="center">
+  <img width="447" height="314" src="SuperpointVal.png" >
+</p>
+<p align="center">
+  <em>Superpoint Validation Precision and Recall</em>
+</p>
 
 For benchmarking: (Yukun)
 Models: 1. MagicLeap pretrained model  2. Another pretrained superpoint (from the repo) 3. the new model we trained
