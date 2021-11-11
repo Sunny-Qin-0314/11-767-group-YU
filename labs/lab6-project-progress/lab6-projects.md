@@ -30,7 +30,7 @@ For retraining: we are using pytorch to train SuperPoint. There are four main st
 
 
 <p align="center">
-  <img width="447" height="314" src="SuperpointVal.png" >
+  <img width="447" height="314" src="Screenshot from 2021-11-10 17-22-25.png" >
 </p>
 <p align="center">
   <em>Superpoint Validation Precision and Recall</em>
