@@ -16,7 +16,7 @@ Today, we will continue working on retraining a few superpoint model with differ
 
 Yuqing is working on retraining the superpoint with different backbone, and output performance level metric and memory usage.
 
-Yukun is working on the C++ and ROS for our benchmarking on KITTI  (TODO).
+Yukun is working on the C++ and ROS for our benchmarking on KITTI. Most of the code has been finished, including a data loading and saving module, a visual odometry module, able to switch between different feature detection front end methods. These methods include classic one, like SIFT and ORB, as well as pertrained Superpoint models with different input resolution. 
 
 2: Execution
 ----
@@ -30,7 +30,9 @@ For retraining: we are using pytorch to train SuperPoint. There are four main st
 
 From last lab, we already have the COCO pseudo label being exported and one newly trained model with mobilenetv1 backbone structure. This lab, we have changed the backbones a little bit more (i.e. mobilenetv2, squeezenet) and retrained the superpoint with the new model structures. Then, benchmarked their performance on HPatches and memory usage. Also, we converted all trained models to onnx version, so that it can be easier to deploy later. Below Figure 1 summarizes our current result for the new trained models on HPatches.
 
-For benchmarking: (Yukun TODO)
+For benchmarking, our data saving module saves output pose messages to local txt files, which are readable by the KITTI odometry evaluation tool. The evaluation tool could calculate both translation and rotation error for the whole testing sequence. We will compare the average translation and rotation errors from different models over the whole KITTI odometry dataset.
+
+For deployment, we installed dependencies, including ROS, OpenCV, Eigen, and Ceres, on our Jetson Nano, and we've tested that our code is runnable on it. The official pretrained SuperPoint model was firstly transformed to onnx models, and further transformed to TensorRT engine files. Our visual odometry code leverages TensorRT's C++ API to run inference on different TensorRT engines.
 
 
 <p align="center">
@@ -45,8 +47,6 @@ For benchmarking: (Yukun TODO)
 2. Was there anything you had hoped to achieve, but did not? What happened? How did you work to resolve these challenges?
 
 We were thinking about using the Feature Paramid Network as another backbone, which is commonly used in the detection task. However, our output dimension is fixed by the definition of SuperPoint (H/8, W/8). And the current training input is (240, 360). If we would like to use FPN, we would expect the output resolution is (H/16, W/16) and further expand and sum up with the previous layer. However, this is not feasible with our current input resolution. Therefore, instead of using FPN as backbone, we used SqueezeNet as the backbone, which used a Fire module (squeeze + expansion in channel) to replace the original convoluation layers.    
-
-TODO
 
 3. What were the contributions of each group member towards all of the above?
 
