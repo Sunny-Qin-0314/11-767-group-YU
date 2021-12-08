@@ -38,12 +38,12 @@ Note that here all models are running on 120x392 images.
 
 | Configuration          | Energy per Inference (J) | CO2(lbs)      |
 |------------------------|--------------------------|---------------|
-| SuperPoint MobileNetv1 | 0.595                    | 1.5767502e-7 |
-| SuperPoint MobileNetv2 | 0.798                    | 2.1147003e-7 |
-| SuperPoint SqueezeNet  | 0.413                    | 1.0944498e-7 |
-| SuperPoint ResNet18    | 0.319                    | 8.4534999e-8 |
+| SuperPoint MobileNetv1 | 0.595                    | 1.7646e-7 |
+| SuperPoint MobileNetv2 | 0.798                    | 2.3667e-7 |
+| SuperPoint SqueezeNet  | 0.413                    | 1.2248e-7 |
+| SuperPoint ResNet18    | 0.319                    | 9.4610e-8 |
 
-Using the equation from the lecture: CO2 = 0.954(lbs/MWh) * energy
+Using the local carbon intensity: CO2 = 1067.7(lbs/MWh) * energy
 
 4. Please include at least this estimate in your final project report.
 
